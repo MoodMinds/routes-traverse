@@ -15,7 +15,7 @@ import org.moodminds.route.Route8;
 import org.moodminds.traverse.Traversable;
 
 /**
- * The {@link Traversable} implementation of the {@link org.moodminds.route.Routes} interface.
+ * The materializing {@link Traversable} implementation of the {@link org.moodminds.route.Routes} interface.
  */
 public class Routes implements org.moodminds.route.Routes {
 
