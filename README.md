@@ -1,10 +1,11 @@
 # Synchronous Traverse implementation of the [Routes](https://github.com/MoodMinds/routes) SPI
 
-This implementation of the [Routes SPI](https://github.com/MoodMinds/routes) utilizes synchronous execution traversal.
-It serves as an ideal extension-base implementation of the [Routes SPI](https://github.com/MoodMinds/routes) or as a client
-library when certain logic cannot be adequately expressed using the Java 8 Streams API. It excels in scenarios where you need
-to allow declaring checked exceptions in functions, implement exception handling, conditionals, and especially when you seek
-graceful, reusable stream definitions.
+This implementation of the [Routes SPI](https://github.com/MoodMinds/routes) offers support for synchronous execution traversal
+and utilizes [Traverse Streams Traversable](https://github.com/MoodMinds/traverse-streams-traversable) for this. It serves
+as an ideal extension-base implementation of the [Routes SPI](https://github.com/MoodMinds/routes) or as a client library
+when certain logic cannot be adequately expressed using the Java 8 Streams API. It excels in scenarios where you need to allow
+declaring checked exceptions in functions, implement exception handling, conditionals, and especially when you seek graceful,
+reusable stream definitions.
 
 ## Understanding the Core
 
