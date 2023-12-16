@@ -1,6 +1,6 @@
 # Contribution Guidelines
 
-Thank you for your interest in contributing to Routes Traverse!
+Thank you for your interest in contributing to **Routes Traverse**!
 
 **Project Status: Experimental and Under Development**
 
