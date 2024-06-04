@@ -28,7 +28,8 @@ class Sample {
     static final Stream<String, RuntimeException> INTEGERS = $ -> $.source("1", "2", "3");
 
     static final Stream2<Boolean, String, String, Exception> STREAMING = ($, bool, str) -> $
-            .either(bool, () -> $.source("a", "b", "c"))
+            .either(bool, () -> $
+                .source("a", "b", "c"))
             .option(str, String::isEmpty, INTEGERS)
             .option(str, "mm"::equals, () -> $
                 .supply(() -> getenv("VAR1")))
