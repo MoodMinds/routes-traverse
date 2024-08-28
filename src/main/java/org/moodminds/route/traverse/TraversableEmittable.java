@@ -46,7 +46,7 @@ public class TraversableEmittable<V, E extends Exception> implements Traversable
      * @throws NullPointerException {@inheritDoc}
      */
     @Override
-    public <H1 extends Exception, H2 extends Exception> boolean traverse(TraverseMethod method, Traverse<V, E, ? extends H1, ? extends H2> traverse, Association<Object, Object, ?> ctx) throws E, H1, H2 {
+    public <H1 extends Exception, H2 extends Exception> boolean traverse(TraverseMethod method, Traverse<V, E, ? extends H1, ? extends H2> traverse, Association<?, ?, ?> ctx) throws E, H1, H2 {
         return method.traverse(traversable, traverse, ctx);
     }
 
@@ -87,7 +87,7 @@ public class TraversableEmittable<V, E extends Exception> implements Traversable
      * @throws SubscribeSupportException an exception indicating that asynchronous subscription is not supported
      */
     @Override
-    public void subscribe(org.reactivestreams.Subscriber<? super V> subscriber, Association<Object, Object, ?> ctx) {
+    public void subscribe(org.reactivestreams.Subscriber<? super V> subscriber, Association<?, ?, ?> ctx) {
         requireNonNull(subscriber); requireNonNull(ctx);
         throw new SubscribeSupportException("Synchronous traversal only.");
     }
@@ -101,7 +101,7 @@ public class TraversableEmittable<V, E extends Exception> implements Traversable
      * @throws SubscribeSupportException an exception indicating that asynchronous subscription is not supported
      */
     @Override
-    public void subscribe(Subscriber<? super V, ? super E> subscriber, Association<Object, Object, ?> ctx) {
+    public void subscribe(Subscriber<? super V, ? super E> subscriber, Association<?, ?, ?> ctx) {
         requireNonNull(subscriber); requireNonNull(ctx);
         throw new SubscribeSupportException("Synchronous traversal only.");
     }
