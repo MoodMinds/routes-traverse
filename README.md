@@ -43,13 +43,13 @@ class Sample {
     // refer to STREAMING emitting Exception inside
     static final Stream2<Boolean, String, String, RuntimeException> CATCHING = ($, bool, str) -> $
             .stream(STREAMING, bool, str)
-            .caught(ex -> $
-                .supply(ex, Exception::getMessage))
-            .caught(IOException.class, ioEx -> $
-                .supply(ioEx, RuntimeException::new, $::except))
-            .caught(IllegalStateException.class, sEx -> $
-                .stream(INTEGERS))
-            .caught(RuntimeException.class, $::except);
+                .caught(Exception.class, ex -> $
+                    .supply(ex, Exception::getMessage))
+                .caught(IOException.class, ioEx -> $
+                    .supply(ioEx, RuntimeException::new, $::except))
+                .caught(IllegalStateException.class, sEx -> $
+                    .stream(INTEGERS))
+                .caught(RuntimeException.class, $::except);
 
 
     // has to declare throws Exception because STREAMING declares it
