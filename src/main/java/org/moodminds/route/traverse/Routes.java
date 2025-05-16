@@ -13,6 +13,7 @@ import org.moodminds.route.Route6;
 import org.moodminds.route.Route7;
 import org.moodminds.route.Route8;
 import org.moodminds.traverse.Traversable;
+import org.moodminds.traverse.TraversableEmittable;
 
 /**
  * The materializing {@link Traversable} implementation of the {@link org.moodminds.route.Routes} interface.

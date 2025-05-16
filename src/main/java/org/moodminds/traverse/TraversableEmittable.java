@@ -1,11 +1,9 @@
-package org.moodminds.route.traverse;
+package org.moodminds.traverse;
 
 import org.moodminds.elemental.Association;
 import org.moodminds.elemental.KeyValue;
 import org.moodminds.emission.Emittable;
 import org.moodminds.reactive.SubscribeSupportException;
-import org.moodminds.traverse.Traversable;
-import org.moodminds.traverse.TraverseMethod;
 
 import static java.util.Objects.requireNonNull;
 
